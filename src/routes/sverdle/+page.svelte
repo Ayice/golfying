@@ -56,9 +56,7 @@
 	 */
 	function update(event: MouseEvent) {
 		const guess = data.guesses[i];
-		const key = (event.target as HTMLButtonElement).getAttribute(
-			'data-key'
-		);
+		const key = (event.target as HTMLButtonElement).getAttribute('data-key');
 
 		if (key === 'backspace') {
 			data.guesses[i] = guess.slice(0, -1);
@@ -192,7 +190,7 @@
 	/>
 {/if}
 
-<style>
+<style lang="postcss">
 	form {
 		width: 100%;
 		height: 100%;

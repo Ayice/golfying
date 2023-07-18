@@ -1,59 +1,31 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Golfying - golf course sniper</title>
+	<meta
+		name="description"
+		content="Svelte demo app"
+	/>
 </svelte:head>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+<section
+	class="flex grow w-100 flex-col flex-wrap h-100 space-y-28 h-full items-center justify-center"
+>
+	<p class="text-white text-7xl font-light">
+		What are <span class="text-blue-600">you</span> looking for?
+	</p>
+	<div class="flex space-x-3">
+		<button
+			class="py-3 shadow rounded bg-blue-600 font-bold border-0 uppercase px-5 text-gray-300 hover:bg-blue-700 hover:shadow-lg hover:text-gray-300 active:text-gray-400 active:shadow-sm active:bg-blue-700 transition"
+		>
+			Clubs and courses for beginners
+		</button>
 
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+		<button
+			class="py-3 shadow rounded border-2 border-blue-600 text-blue-600 font-bold uppercase px-5 hover:bg-blue-600 hover:shadow-lg hover:text-gray-300 active:text-gray-400 active:shadow-sm active:bg-blue-700 transition"
+		>
+			Most popular courses in your area
+		</button>
+	</div>
 </section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
